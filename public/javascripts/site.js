@@ -16,11 +16,10 @@ const getContentCar = async function(ev) {
                      "http://localhost:3000/xml/carassignment.xsl",
                      "contentCars",
                      "");
-    
 };
 
 const init = function () {
-    if ($('navmenu') && $('contentBooks') && $('contentCars')) {   // on the right page
+    if ($('contentBooks') && $('contentCars')) {   // on the right page
         getContentBooks();
     }
 };

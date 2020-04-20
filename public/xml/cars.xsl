@@ -2,10 +2,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns="http://www.w3.org/1999/xhtml">
 
-	<xsl:output method="xml"
-				indent="yes"
-				omit-xml-declaration="no"
-	            doctype-system="about:legacy-compat"/>
+	<xsl:output indent="yes"
+				omit-xml-declaration="no"/>
 
 	<xsl:template match="cars">
 		<div>
@@ -41,7 +39,9 @@
 				<tr>
 					<td colspan="4">Average price</td>
 					<td>DKR</td>
-					<td><xsl:value-of select="sum(car/price)"/></td>
+					<td><xsl:value-of select="sum(car/price) div count(car/@model)"/></td>
+
+				
 				</tr>
 		</table>
 		</div>

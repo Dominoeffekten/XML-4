@@ -2,10 +2,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns="http://www.w3.org/1999/xhtml">
 
-	<xsl:output method="xml"
-				indent="yes"
-				omit-xml-declaration="no"
-	            doctype-system="about:legacy-compat"/>
+	<xsl:output indent="yes"
+				omit-xml-declaration="no"/>
 	<!-- Root -->
 	<xsl:template match="booksCanon">
 		<div>
@@ -56,15 +54,7 @@
 	<!-- comments -->
 	<xsl:template match="booksCanon/book/comments">
 		<p><b>Comments: </b> <xsl:apply-templates/></p>
-	</xsl:template>
-
-
-
-	<!-- style-->
-	<xsl:template match="para[@type='note']" priority="1">
-		<p style="background-color: #cccccc; border: thin solid; width:300px;">
-			<b><xsl:apply-templates/></b>
-		</p>
+		<hr />
 	</xsl:template>
 	
 

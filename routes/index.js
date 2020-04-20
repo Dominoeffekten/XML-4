@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.get('/xslt', function (req, res, next) {
     res.render('xslt', {
       title: 'Test XSLT on the Client',
-      h2: 'XSLT',
+      h2: 'There are XLST on this site',
     });
 });
 

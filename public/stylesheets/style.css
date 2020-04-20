@@ -28,19 +28,25 @@ body {
 	margin: 15px;
 }
 article{
-	padding-left: 20px;
+    width: 45%;
+    height: 200px;
+    float: left;
+    margin: 20px;
+	padding: 10px;
+	outline: 1px solid var(--background-color)
 }
 hr {
     margin: 20px 0;
-}
-main{
-	background-color: var(--background-color);
 }
 footer{
 	background-color: var(--color);
 	padding: 17px 0;
     color: var(--text-color);
     text-align: center;
+}
+footer a {
+	color: var(--white);
+	text-decoration: none;
 }
 header {
   text-align: right;
@@ -59,13 +65,23 @@ header nav ul li {
 header nav ul li a{
   text-decoration: none;
   color: var(--black);;
+  outline: var(--outline);
+  padding: 5px;
 }
 h1{
   float: left;
 }
+.imgDiv{
+    width: 60%;
+    margin: 20px auto;
+}
+img{
+    height: auto;
+    width: 100%;
+}
 /* tabeller */
 table, th, td { 
-	outline: 1px solid;
+	outline: var(--outline);
 	padding: 5px;
 }
 /* input felter */
@@ -94,7 +110,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 button{
 	color:var(--text-color);
-  padding: 10px;
+  	padding: 10px;
 	font-size: 16px;
 	border: none;
 	margin: 10px;

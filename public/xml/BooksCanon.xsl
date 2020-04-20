@@ -6,38 +6,16 @@
 				indent="yes"
 				omit-xml-declaration="no"
 	            doctype-system="about:legacy-compat"/>
-
-	<!-- The following rule matches the root element,
-		 irrespective of name,
-	     and creates an html outline with an apply templates somewhere
-	-->
-	<xsl:template match="/">
-		<html>
-			<head>
-				<title>Books</title>
-				<meta charset="utf-8"/>
-			</head>
-			<body style="background-color: #cccccc;">
-				<xsl:apply-templates/>
-			</body>
-		</html>
-	</xsl:template>
-
-	<!-- Title -->
-	<xsl:template match="booksCanon/book">
-		<section style="
-			background-color: lightblue;
-			outline: 1px solid;
-			padding: 10px;
-			width: 50%;
-			margin: 10px auto;">
-		<xsl:apply-templates/>
-		</section>
+	<!-- Root -->
+	<xsl:template match="booksCanon">
+		<div>
+			<xsl:apply-templates/>
+		</div>
 	</xsl:template>
 	
 	<!-- Title -->
 	<xsl:template match="booksCanon/book/title">
-		<h1><xsl:apply-templates/></h1>
+		<h3><xsl:apply-templates/></h3>
 	</xsl:template>
 
 	<!-- edition -->
@@ -88,5 +66,6 @@
 			<b><xsl:apply-templates/></b>
 		</p>
 	</xsl:template>
+	
 
 </xsl:stylesheet>

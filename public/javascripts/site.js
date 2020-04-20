@@ -5,22 +5,26 @@ import {getFileAjax} from './modules/Ajax.js';
 import {getAndXSLT} from './modules/Ajax.js';
 
 const getContentBooks = async function(ev) {
+    console.log(ev);
     await getAndXSLT("http://localhost:3000/xml/BooksCanon.xml",
                      "http://localhost:3000/xml/BooksCanon.xsl",
                      "contentBooks",
+                     console.log(ev),
                      "");
 };
 
 const getContentCar = async function(ev) {
     await getAndXSLT("http://localhost:3000/xml/cars.xml",
-                     "http://localhost:3000/xml/carassignment.xsl",
+                     "http://localhost:3000/xml/cars.xsl",
                      "contentCars",
                      "");
+                
 };
 
 const init = function () {
     if ($('contentBooks') && $('contentCars')) {   // on the right page
         getContentBooks();
+        getContentCar();
     }
 };
 
